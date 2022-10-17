@@ -19,12 +19,12 @@ namespace DBCrud.Controllers
         }
 
 
-        /*[HttpGet]
+        [HttpGet]
         public IActionResult Add()
         {
-            ModelState.AddModelError("Title", "99999");
+            //ModelState.AddModelError("Title", "99999");
             return View();
-        }*/
+        }
 
         [HttpGet]
         public IActionResult Index()
@@ -34,7 +34,7 @@ namespace DBCrud.Controllers
 
         [HttpPost]
         //  [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(Post post, IFormFile ImageUrl)
+        public async Task<IActionResult> Add(Post post/*, IFormFile ImageUrl*/)
         {
             /*if (ImageUrl != null)
             {
@@ -52,11 +52,11 @@ namespace DBCrud.Controllers
             blogDbContext.Posts.AddAsync(post);
             await blogDbContext.SaveChangesAsync();
             //TempData["Status"] = "New post added!";
-            return RedirectToAction("Index");
+            //return RedirectToAction("Index");
             //      }
 
 
-            return View(post);
+            return View();
         }
     }
 }
