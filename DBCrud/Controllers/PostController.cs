@@ -22,7 +22,7 @@ namespace DBCrud.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            ModelState.AddModelError("Title", "99999");
+            //ModelState.AddModelError("Title", "99999");
             return View();
         }
 
@@ -36,13 +36,13 @@ namespace DBCrud.Controllers
         //  [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add(Post post, IFormFile ImageUrl)
         {
-            if (ImageUrl != null)
+            /*if (ImageUrl != null)
             {
                 var filename = $"{Guid.NewGuid()}{Path.GetExtension(ImageUrl.FileName)}";
                 using var fs = new FileStream(@$"wwwroot/uploads/{filename}", FileMode.Create);
                 await ImageUrl.CopyToAsync(fs);
                 post.ImageUrl = @$"/uploads/{filename}";
-            }
+            }*/
 
 
             //    if (ModelState.IsValid)
@@ -56,7 +56,7 @@ namespace DBCrud.Controllers
             //      }
 
 
-            return View(post);
+            //return View(post);
         }
     }
 }
