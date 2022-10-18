@@ -52,11 +52,11 @@ namespace DBCrud.Controllers
             blogDbContext.Posts.AddAsync(post);
             await blogDbContext.SaveChangesAsync();
             //TempData["Status"] = "New post added!";
-            //return RedirectToAction("Index");
+            return RedirectToAction("Index");
             //      }
 
 
-            return View();
+            //return View(post);
         }
     }
 }
