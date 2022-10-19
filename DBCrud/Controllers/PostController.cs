@@ -45,18 +45,18 @@ namespace DBCrud.Controllers
             }*/
 
 
-            //    if (ModelState.IsValid)
-            //   {
+            if (ModelState.IsValid)
+            {
             post.Date = DateTime.Now;
 
             blogDbContext.Posts.AddAsync(post);
             await blogDbContext.SaveChangesAsync();
             TempData["Status"] = "New post added!";
             return RedirectToAction("Index");
-            //      }
+            }
 
 
-            //return View(post);
+            return View(post);
         }
     }
 }
