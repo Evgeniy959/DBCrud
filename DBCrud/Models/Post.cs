@@ -9,7 +9,8 @@ namespace DBCrud.Models
     public class Post
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "This is wrong")]
+        //[Required(ErrorMessage = "This is wrong")]
+        [Required]
         [MaxLength(255)]
         //[MinLength(3, ErrorMessage = "NOT NOT NOT")]
         public string Title { get; set; }
