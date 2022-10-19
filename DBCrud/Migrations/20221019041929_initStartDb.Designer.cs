@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBCrud.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20221017080937_InitDb")]
-    partial class InitDb
+    [Migration("20221019041929_initStartDb")]
+    partial class initStartDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

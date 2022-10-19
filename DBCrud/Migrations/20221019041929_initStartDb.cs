@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DBCrud.Migrations
 {
-    public partial class InitDb : Migration
+    public partial class initStartDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
