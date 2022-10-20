@@ -9,10 +9,9 @@ namespace DBCrud.Models
     public class Post
     {
         public int Id { get; set; }
-        //[Required(ErrorMessage = "This is wrong")]
-        [Required]
+        [Required(ErrorMessage = "This is wrong")]
         [MaxLength(255)]
-        //[MinLength(3, ErrorMessage = "NOT NOT NOT")]
+        [MinLength(3, ErrorMessage = "NOT NOT NOT")]
         public string Title { get; set; }
 
         [Required]
@@ -22,7 +21,7 @@ namespace DBCrud.Models
 
         [Required]
         //   [DataType(DataType.Upload] 
-        //[Display(Name = "Image path : ")]
+        [Display(Name = "Image path : ")]
         public string ImageUrl { get; set; }
     }
 }

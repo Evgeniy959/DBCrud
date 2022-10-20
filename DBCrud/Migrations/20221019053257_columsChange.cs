@@ -2,7 +2,7 @@
 
 namespace DBCrud.Migrations
 {
-    public partial class columChange : Migration
+    public partial class columsChange : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
